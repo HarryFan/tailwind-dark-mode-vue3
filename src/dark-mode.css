@@ -1,0 +1,28 @@
+/* dark-mode.css */
+
+/* 暗色模式下的全局背景和文字顏色 */
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* 暗灰色背景 */
+  color: rgba(255, 255, 255, 0.87); /* 較亮的文字色 */
+}
+
+/* 暗色模式下的 .card 樣式調整 */
+.dark .card {
+  background-color: #1F2933; /* 暗色背景，稍微亮於全局背景以創造層次感 */
+  border: 1px solid #2D3A4D; /* 暗色邊框，選擇與背景色對比度較低的顏色 */
+  color: #CBD2D9; /* 柔和的文字顏色，增加可讀性但不刺眼 */
+  border-radius: 4px; /* 維持圓角設計 */
+}
+
+/* 其他元素樣式的建議繼續保持一致性和可讀性 */
+.dark .button {
+  background-color: #3B82F6; /* 使用主題色彩，但適度調暗以適合暗背景 */
+  color: #FFFFFF; /* 保持按鈕文字白色以突出 */
+  border-color: #2563EB; /* 邊框顏色可以稍亮，以與背景色形成對比 */
+}
+
+.dark .header {
+  background-color: #1A202C; /* 頭部區塊選擇更深的背景色 */
+  color: #A0AEC0; /* 標題文字選擇較亮的灰色系以確保清晰度 */
+}
