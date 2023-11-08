@@ -1,23 +1,33 @@
 <template>
   <div class="container mx-auto p-4">
-    <button @click="toggleDarkMode" class="bg-blue-500 text-white p-2 rounded">
+    <button @click="toggleDarkMode" class="bg-blue-500 text-white p-2 rounded dark:bg-white dark:text-gray-800">
       切換深色模式
     </button>
   </div>
 </template>
 
-<script>
+
+<script lang="ts">
+import { ref } from 'vue';
+
 export default {
   name: 'DarkModeToggle',
-  methods: {
-    toggleDarkMode() {
-      // Toggle the 'dark' class on the body element
-      document.body.classList.toggle('dark');
-    },
+  setup() {
+    const isDarkMode = ref(false);
+
+    const toggleDarkMode = () => {
+      isDarkMode.value = !isDarkMode.value;
+      document.body.classList.toggle('dark', isDarkMode.value);
+    };
+
+    return {
+      isDarkMode,
+      toggleDarkMode,
+    };
   },
 };
-</script>
+</script>           
 
 <style scoped>
-/* Scoped styles for your DarkModeToggle component */
+
 </style>
